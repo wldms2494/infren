@@ -46,6 +46,7 @@ public class ApplicationContextExtendsFindTest {
 
   @Test
   @DisplayName("특정 하위 타입으로 조회")
+  //구체 타입으로 조회하는것은 권장하지 않음
   void findBeanBySubType(){
     RateDiscountPolicy bean = ac.getBean(RateDiscountPolicy.class);
     assertThat(bean).isInstanceOf(RateDiscountPolicy.class);
