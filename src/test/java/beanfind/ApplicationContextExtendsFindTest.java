@@ -20,12 +20,12 @@ public class ApplicationContextExtendsFindTest {
   AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(TestConfig.class);
 
   @Test
-  @DisplayName("부모 출력하면 자식들도 나오냐")
+  @DisplayName("부모 타입으로 모두 조회하기")
 	//내가 먼저 작성해본 테스트
-  void findBeanByParentsClass() {
+  void findAllBeansByParentType() {
 	Map<String, DiscountPolicy> beansOfType = ac.getBeansOfType(DiscountPolicy.class);
 	for (String key : beansOfType.keySet()) {
-	  System.out.println("key - " + key);
+	  System.out.println("key - " + key + " value = " + beansOfType.get(key));
 	}
   }
 
