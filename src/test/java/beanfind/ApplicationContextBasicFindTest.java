@@ -47,6 +47,4 @@ public class ApplicationContextBasicFindTest {
 	//딱 저 예외가 터져야함. 아니면 테스트코드 실패
   }
 
-
-
 }
